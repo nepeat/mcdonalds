@@ -9,7 +9,7 @@ mcdonalds_info = tarfile.TarInfo()
 with open("mcdonalds.png", "rb") as mcdonalds:
     mcdonalds_data = mcdonalds.read()
     mcdonalds_info.size = len(mcdonalds_data)
-    print(f"{len(mcdonalds_data)} bytes of mcdonalds")
+    print(f"1 MCDONALD'S! = {len(mcdonalds_data)} bytes")
     mcdonalds_io.write(mcdonalds_data)
 
 lastprint = 0
