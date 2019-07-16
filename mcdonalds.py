@@ -18,7 +18,7 @@ x = 0
 def bytestats(total: int):
     b = mcdonalds_info.size * total
 
-    return "bytes: {bytes}; kb: {kilos}; mb: {megas}".format(
+    return "MCDONALD'S!: {total}; bytes: {bytes}; kb: {kilos}; mb: {megas}".format(
         bytes=b,
         kilos=b/1024,
         megas=b/1024/1024
