@@ -2,7 +2,11 @@ import tarfile
 import io
 import sys
 import time
+import os
 
+mcdonalds_path = "mcdonalds.tar"
+if "TAPE" in os.environ:
+    mcdonalds_path = "/dev/st0"
 mcdonalds_io = io.BytesIO()
 mcdonalds_info = tarfile.TarInfo()
 
@@ -24,7 +28,7 @@ def bytestats(total: int):
         megas=b/1024/1024
     )
 
-with tarfile.open("/dev/st0", "w") as tar:
+with tarfile.open(mcdonalds_path, "w") as tar:
     try:
         while True:
             mcdonalds_io.seek(0)
